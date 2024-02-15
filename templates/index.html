@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gas Receipt Form</title>
+</head>
+<body>
+    <h1>Gas Receipt Form</h1>
+    <form action="/submit" method="post">
+        Date (dd-mm-yyyy): <input type="text" name="date" pattern="\d{2}-\d{2}-\d{4}" placeholder="dd-mm-yyyy" title="Date must be in the format dd-mm-yyyy" required><br>
+        Time (24-hour format HH:MM:SS): <input type="text" name="time" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]" placeholder="HH:MM:SS" title="Time must be in 24-hour format HH:MM:SS" required><br>
+        Liters (to 3 decimals, default 0.000): <input type="text" id="liters" name="liters" placeholder="0.000" value="0.000" required><br>
+        Total Dollar (including taxes): <input type="text" name="total_dollar"><br>
+        Vehicle Number (Format: UNITNumber-Last 4 digits of VIN or 8-0000/9-0000 for rentals/personals): <input type="text" name="vehicle"><br>
+        Odometer: <input type="text" name="odometer"><br>
+        Last 4 digits of Fuel Card: <input type="text" name="fuel_card"><br>
+        Payment Method (Enter 0000 for cash): <input type="text" name="payment_method"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
